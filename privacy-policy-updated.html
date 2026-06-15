@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Looking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      oklch(25% 0.115 280);
+      --navy-mid:  oklch(35% 0.10 280);
+      --pink:      oklch(62% 0.21 355);
+      --lavender:  oklch(93% 0.038 280);
+      --bg:        oklch(98.5% 0.006 280);
+      --surface:   oklch(100% 0.003 280);
+      --text:      oklch(22% 0.10 280);
+      --muted:     oklch(52% 0.06 280);
+      --border:    oklch(91% 0.018 280);
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      background: var(--navy);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .wordmark {
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      font-weight: 800;
+      color: oklch(97% 0.006 280);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .wordmark span {
+      color: var(--pink);
+    }
+
+    .header-sub {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: oklch(70% 0.06 280);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── Meta bar ───────────────────────────────────────── */
+    .meta-bar {
+      background: var(--lavender);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meta-bar-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0.75rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--navy-mid);
+      letter-spacing: 0.02em;
+    }
+
+    .meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--pink);
+      flex-shrink: 0;
+    }
+
+    /* ── Main content ───────────────────────────────────── */
+    main {
+      padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Sections ───────────────────────────────────────── */
+    section {
+      margin-bottom: 2.25rem;
+      padding-bottom: 2.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .section-num {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--pink);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      margin-top: 0.15em;
+    }
+
+    h2 {
+      font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 0.975rem;
+      color: var(--text);
+      margin-bottom: 0.85rem;
+      max-width: 66ch;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    li {
+      font-size: 0.975rem;
+      color: var(--text);
+      padding-left: 1.25rem;
+      position: relative;
+      max-width: 66ch;
+    }
+
+    li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--navy-mid);
+      opacity: 0.4;
+    }
+
+    a {
+      color: var(--navy);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--pink); }
+
+    strong { font-weight: 700; color: var(--navy); }
+
+    /* ── Footer ─────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      margin-top: clamp(2rem, 5vw, 4rem);
+    }
+
+    .footer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-wordmark {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: oklch(80% 0.04 280);
+      letter-spacing: -0.02em;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+
+    .footer-email {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: oklch(65% 0.06 280);
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: oklch(50% 0.05 280);
+    }
+
+    @media (max-width: 480px) {
+      .footer-right { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="wordmark">looking<span>.</span></div>
+      <div class="header-sub">Privacy Policy</div>
+    </div>
+  </header>
+
+  <div class="meta-bar">
+    <div class="meta-bar-inner">
+      <span class="meta-dot"></span>
+      Last updated: June 2026
+    </div>
+  </div>
+
+  <main>
+    <div class="content">
+
+      <p class="intro">
+        Looking is an app for sharing travel memories with the people closest to you.
+        This policy explains what information we collect, why we collect it, and how you
+        control it. We've written it in plain language on purpose.
+      </p>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">01</span>
+          <h2>Information We Collect</h2>
+        </div>
+        <p>When you create an account and use Looking, we collect:</p>
+        <ul>
+          <li><strong>Account details</strong> — your username, display name, email address, and a hashed version of your password (we never store passwords in plain text)</li>
+          <li><strong>Photos</strong> — images you choose to upload when creating a post</li>
+          <li><strong>Destinations</strong> — the location or destination you attach to a post</li>
+          <li><strong>Captions and comments</strong> — text you write on posts and in comments</li>
+          <li><strong>Social connections</strong> — who you follow and who follows you</li>
+          <li><strong>In-app activity</strong> — reactions, group memberships, and notification interactions</li>
+        </ul>
+        <p>We do not collect your device location, contacts, or any data beyond what you explicitly provide inside the app.</p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">02</span>
+          <h2>Device Permissions</h2>
+        </div>
+        <p>Looking requests the following permissions on your device. You will be prompted before any permission is granted, and you can change your choices at any time in your device Settings.</p>
+        <ul>
+          <li><strong>Camera</strong> — used only when you tap the camera button to take a photo for a new post. We do not access your camera at any other time.</li>
+          <li><strong>Photo Library</strong> — used only when you choose to upload an existing photo from your library for a new post. We do not scan or read your library in the background.</li>
+        </ul>
+        <p>Photos you choose to upload are sent to our servers and stored via Supabase (see section 04). Photos that remain on your device are never accessed without your explicit action.</p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">03</span>
+          <h2>How We Use Your Information</h2>
+        </div>
+        <p>Everything we collect is used solely to run and improve Looking:</p>
+        <ul>
+          <li>To show your posts to your followers and to you</li>
+          <li>To power the Explore feed for public posts</li>
+          <li>To send notifications when someone follows you, reacts to your post, or leaves a comment</li>
+          <li>To enforce your privacy settings (private account, group-only posts)</li>
+          <li>To let you manage your account and content</li>
+        </ul>
+        <p>We do not sell your data. We do not use your data for advertising. We do not build profiles for third-party use.</p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">04</span>
+          <h2>Third Parties We Work With</h2>
+        </div>
+        <p>We use a small number of trusted services to run Looking:</p>
+        <ul>
+          <li><strong>Supabase</strong> — stores the photos you upload, hosted securely in the cloud</li>
+          <li><strong>Expo / EAS</strong> — delivers app updates to your device</li>
+          <li><strong>Render</strong> — hosts the Looking API server</li>
+        </ul>
+        <p>These services receive only the minimum data needed to perform their function. They are not permitted to use your data for their own purposes.</p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">05</span>
+          <h2>How Long We Keep Your Data</h2>
+        </div>
+        <p>
+          We keep your data for as long as your account is active. When you delete your account
+          from within the app, we permanently remove your profile, posts, comments, reactions,
+          and all associated data from our servers. This cannot be undone.
+        </p>
+        <p>
+          Backups may retain data for a short period after deletion as part of routine
+          infrastructure operations. This data is never accessible to other users and is
+          purged on the next backup cycle.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">06</span>
+          <h2>Your Rights and Controls</h2>
+        </div>
+        <p>You are in control of your data:</p>
+        <ul>
+          <li><strong>Private account</strong> — switch to private in Settings to require approval before anyone can follow you or see your posts</li>
+          <li><strong>Delete posts</strong> — remove any post at any time from the post detail screen</li>
+          <li><strong>Delete your account</strong> — permanently erase your account and all your data from Settings &rsaquo; Edit Profile &rsaquo; Delete Account</li>
+          <li><strong>Access your data</strong> — email us and we will provide a copy of the data associated with your account</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">07</span>
+          <h2>Children's Privacy</h2>
+        </div>
+        <p>
+          Looking is not directed at children under 13. We do not knowingly collect personal
+          information from anyone under 13. If you believe a child has provided us with their
+          information, please contact us and we will delete it promptly.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">08</span>
+          <h2>Changes to This Policy</h2>
+        </div>
+        <p>
+          If we make material changes to this policy, we will update the date at the top of
+          this page. For significant changes, we may also notify you within the app. Continuing
+          to use Looking after a change means you accept the updated policy.
+        </p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <span class="section-num">09</span>
+          <h2>Contact Us</h2>
+        </div>
+        <p>
+          Questions, requests, or concerns about your privacy? We're reachable at:
+        </p>
+        <p>
+          <a href="mailto:eitani2004@gmail.com">eitani2004@gmail.com</a>
+        </p>
+        <p>We aim to respond within 48 hours.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-wordmark">looking.</span>
+      <div class="footer-right">
+        <span class="footer-email">eitani2004@gmail.com</span>
+        <span class="footer-copy">&copy; 2026 Looking. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
